@@ -17,23 +17,30 @@ public class Dbalumnos extends DbHelper {
     }
 
     //creamos un metodo
-    public long insertarContactos(String nombre, String telefono, String correo_electronico) {
+    public long insertarContactos(String nombre, String apellido, String dni, String telefono,
+                                  String correo_electronico, String carrera, String ciclo,
+                                  String seccion, String direccion, String fecha_nacimiento) {
         long id = 0;
         try {
             DbHelper dbHelper = new DbHelper(context);
             SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-            //agregar la funcion insertar los registros
             ContentValues values = new ContentValues();
             values.put("nombre", nombre);
+            values.put("apellido", apellido);
+            values.put("dni", dni);
             values.put("telefono", telefono);
             values.put("correo_electronico", correo_electronico);
+            values.put("carrera", carrera);
+            values.put("ciclo", ciclo);
+            values.put("seccion", seccion);
+            values.put("direccion", direccion);
+            values.put("fecha_nacimiento", fecha_nacimiento);
 
-            // nos va regresar el id insertado
             id = db.insert(TABLE_CONCTACTOS, null, values);
 
         } catch (Exception ex) {
-            ex.toString();
+            android.util.Log.e("DB_ERROR", ex.toString());
         }
         return id;
     }

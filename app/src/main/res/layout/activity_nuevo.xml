@@ -1,45 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".NuevoActivity">
 
-    <EditText
-        android:id="@+id/txtNombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hint_nombre"
-        android:inputType="text"
-        android:textSize="24sp" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/txtTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_telefono"
-        android:ems="10"
-        android:inputType="phone"
-        android:textSize="24sp" />
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nombre" />
 
-    <EditText
-        android:id="@+id/txtCorreoElectronico"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_correo_electronico"
-        android:ems="10"
-        android:textSize="24sp" />
+        <EditText
+            android:id="@+id/txtApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_apellido" />
 
-    <Button
-        android:id="@+id/BtnGuarda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/btn_guardar"
-        android:text="GUARDAR REGISTRO"
-        android:textSize="24sp"/>
+        <EditText
+            android:id="@+id/txtDni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/hint_dni" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/hint_telefono" />
+
+        <EditText
+            android:id="@+id/txtCorreoElectronico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_correo_electronico" />
+
+        <EditText
+            android:id="@+id/txtCarrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_carrera" />
+
+        <EditText
+            android:id="@+id/txtCiclo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_ciclo" />
+
+        <EditText
+            android:id="@+id/txtSeccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_seccion" />
+
+        <EditText
+            android:id="@+id/txtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_direccion" />
+
+        <EditText
+            android:id="@+id/txtFechaNacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_fecha_nacimiento" />
+
+        <Button
+            android:id="@+id/BtnGuarda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_guardar" />
+
+    </LinearLayout>
+</ScrollView>
